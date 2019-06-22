@@ -1,0 +1,24 @@
+{
+  "name": "smart-pi",
+  "version": "0.0.1",
+  "description": "Smart Home Meant for Raspberry Pi",
+  "main": "controller.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "raspberry",
+    "pi",
+    "smart",
+    "home",
+    "automation",
+    "mozilla",
+    "iot",
+    "gateway"
+  ],
+  "author": "Manny Cato",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
