@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  # Smart Pi
+  smartpi:
+    container_name: smart-pi
+    image: "playermanny2/smart-pi"
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    depends_on:
+      - plex
+      - mozillaiot
+    networks:
+      - backend
+
+  # Plex Service
+  plex:
+    container_name: plex
+    image: plexinc/pms-docker
+    network_mode: host
+    ports:
+      - "32400:32400"
+    restart: unless-stopped
+
+  mozillaiot:
+  # Mozilla Iot Service
+    container_name: mozilla-iot-gateway
+    image: "mozillaiot/gateway:arm"
+    ports:
+      - "8080:8080"
+      - "4443:4443"
+    restart: unless-stopped
+    networks:
+      - backend
+
+networks:
+  backend:
