@@ -5,7 +5,7 @@ services:
   # Smart Pi
   smartpi:
     container_name: smart-pi
-    image: "playermanny2/smart-pi"
+    image: "playermanny2/smart-pi:ef4e82ce454c"
     ports:
       - "8000:8000"
     restart: unless-stopped
@@ -18,7 +18,7 @@ services:
   # Plex Service
   plex:
     container_name: plex
-    image: plexinc/pms-docker
+    image: linuxserver/plex:arm64v8-latest
     network_mode: host
     ports:
       - "32400:32400"
