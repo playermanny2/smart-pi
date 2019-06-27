@@ -18,7 +18,7 @@ services:
   # Plex Service
   plex:
     container_name: plex
-    image: linuxserver/plex:arm64v8-latest
+    image: linuxserver/plex:arm32v7-latest
     network_mode: host
     ports:
       - "32400:32400"
