@@ -5,7 +5,7 @@ services:
   # Smart Pi
   smartpi:
     container_name: smart-pi
-    image: "playermanny2/smart-pi:24a823db57a1"
+    image: "playermanny2/smart-pi:bb6e91f13513"
     ports:
       - "8000:8000"
     restart: unless-stopped
